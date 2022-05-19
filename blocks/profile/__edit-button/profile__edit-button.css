@@ -1,0 +1,29 @@
+.profile__edit-button {
+  width: 24px;
+  height: 24px;
+  background: transparent url("../../../images/edit-icon.svg") center no-repeat;
+  /* Ideally, students should be familiar with shorthand properties. Advise using it in "Could be improved" */
+  background-size: 10px 10px;
+  border: 1px solid #fff;
+  grid-area: button;
+  align-self: center;
+  /* It's possible to align it precisely according to Pixel Perfect using `margin`,
+     but I kept `align-self` here. */
+  cursor: pointer;
+  transition: 0.3s;
+  /* Students should be well familiar with `transition` by now */
+  padding: 0;
+  margin: 0;
+}
+
+.profile__edit-button:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 480px) {
+  .profile__edit-button {
+    width: 18px;
+    height: 18px;
+    background-size: 8px 8px;
+  }
+}

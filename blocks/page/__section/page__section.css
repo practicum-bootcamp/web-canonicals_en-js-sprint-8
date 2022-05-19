@@ -1,0 +1,14 @@
+.page__section {
+  width: 100%;
+  max-width: 882px;
+  /* Optional. You can accept the project without limiting the maximum width here. */
+  box-sizing: border-box;
+  position: relative;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 1140px) {
+  .page__section {
+    width: calc(100% - 40px);
+  }
+}

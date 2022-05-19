@@ -1,0 +1,36 @@
+.header {
+  min-height: 120px;
+  /* Measured with PixelPerfect, else it's `min-height: 117px;` */
+  font-family: "Inter", Arial, sans-serif;
+  display: flex;
+  align-items: center;
+  /* border-bottom: 1px solid rgba(84, 84, 84, 0.7); */
+  /* Use RGBA to specify opacity */
+
+  flex-shrink: 0;
+  /* Sticky footer */
+}
+
+.header::before {
+  content: "";
+  width: 100%;
+  height: 1px;
+  opacity: 0.7;
+  background: #545454;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  /* To be centered. Students know about translate */
+  bottom: 0;
+}
+
+/* The best solution is shown here - suggest it in "Could be improved" */
+
+@media screen and (max-width: 480px) {
+  .header {
+    min-height: 85px;
+  }
+  .header::before {
+    width: calc(100% + 40px);
+  }
+}

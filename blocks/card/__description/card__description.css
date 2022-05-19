@@ -1,0 +1,8 @@
+.card__description {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  padding: 25px 15px 31px 21px;
+  /* To make spacings to the top and bottom identical per PixelPerfext */
+}

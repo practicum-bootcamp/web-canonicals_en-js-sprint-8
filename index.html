@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+      name="viewport"
+    />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <title>Around The U.S</title>
+  </head>
+  <body class="page">
+    <div class="page__content">
+      <header class="header page__section">
+        <img
+          src="<%=require('./images/logo.svg')%>"
+          alt="Логотип проекта масто"
+          class="logo header__logo"
+        />
+      </header>
+      <main class="content">
+        <section class="profile page__section">
+          <img
+            src="<%=require('./images/avatar.jpg')%>"
+            alt="Avatar"
+            class="profile__image"
+          />
+          <div class="profile__info">
+            <h1 class="profile__title">Jacques Cousteau</h1>
+            <button class="profile__edit-button" type="button"></button>
+            <p class="profile__description">Explorer</p>
+          </div>
+          <button class="profile__add-button" type="button"></button>
+        </section>
+        <section class="cards page__section">
+          <ul class="cards__list"></ul>
+        </section>
+      </main>
+      <footer class="footer page__section">
+        <p class="footer__copyright">© 2022 Around The U.S.</p>
+      </footer>
+      <div class="popup" id="edit-popup">
+        <div class="popup__content">
+          <button class="popup__close" type="button"></button>
+          <h3 class="popup__title">Edit Profile</h3>
+          <form class="popup__form" id="edit-profile-form" novalidate>
+            <label class="popup__label">
+              <input
+                class="popup__input popup__input_type_name"
+                id="owner-name"
+                maxlength="40"
+                minlength="2"
+                name="userName"
+                placeholder="Name"
+                required
+                type="text"
+              />
+              <span class="popup__error" id="owner-name-error"></span>
+            </label>
+            <label class="popup__label">
+              <input
+                class="popup__input popup__input_type_description"
+                id="owner-description"
+                maxlength="200"
+                minlength="2"
+                name="userDescription"
+                placeholder="About me"
+                required
+                type="text"
+              />
+              <span class="popup__error" id="owner-description-error"></span>
+            </label>
+            <button class="button popup__button" type="submit">Save</button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="new-card-popup">
+        <div class="popup__content">
+          <button class="popup__close" type="button"></button>
+          <h3 class="popup__title">New Place</h3>
+          <form class="popup__form" id="new-card-form" novalidate>
+            <label class="popup__label">
+              <input
+                class="popup__input popup__input_type_card-name"
+                id="card-name"
+                maxlength="30"
+                minlength="1"
+                name="name"
+                placeholder="Title"
+                required
+                type="text"
+              />
+              <span class="popup__error" id="card-name-error"></span>
+            </label>
+            <label class="popup__label">
+              <input
+                class="popup__input popup__input_type_url"
+                id="card-link"
+                name="link"
+                placeholder="Image link"
+                required
+                type="url"
+              />
+              <span class="popup__error" id="card-link-error"></span>
+            </label>
+            <button
+              class="button popup__button popup__button_disabled"
+              type="submit"
+            >
+              Save
+            </button>
+          </form>
+        </div>
+      </div>
+      <div class="popup" id="image-popup">
+        <div class="popup__content popup__content_content_image">
+          <button class="popup__close" type="button"></button>
+          <img alt="" class="popup__image" src="" />
+          <p class="popup__caption"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- The card template below was implemented in sprint 5 -->
+    <template class="card-template">
+      <!-- Students learned about the `<template>` tag in sprint 5 -->
+      <li class="card">
+        <img class="card__image" src="" alt="" />
+        <button class="card__delete-button" type="button"></button>
+        <!-- Background, inline style -->
+        <div class="card__description">
+          <h2 class="card__title"></h2>
+          <button class="card__like-button" type="button"></button>
+        </div>
+      </li>
+    </template>
+  </body>
+</html>

@@ -1,0 +1,17 @@
+.profile {
+  font-family: "Inter", Arial, sans-serif;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  padding: 40px 0 32px;
+  /* Measured with PixelPerfect, else it's `padding: 40px 0;`.
+     Don't be too strict with students here. */
+}
+
+@media screen and (max-width: 480px) {
+  .profile {
+    padding: 43px 0 21px;
+    flex-direction: column;
+    text-align: center;
+  }
+}

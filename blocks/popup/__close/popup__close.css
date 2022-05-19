@@ -1,0 +1,32 @@
+.popup__close {
+  width: 35px;
+  height: 35px;
+  background: transparent url("../../../images/close.svg") center no-repeat;
+  /* Ideally, students should be familiar with shorthand properties. Advise using it in "Could be improved" */
+  background-size: 35px 35px;
+  /* It's possible to align it precisely according to Pixel Perfect using `margin`,
+     but I kept `align-self` here. */
+  border: none;
+  position: absolute;
+  top: -39px;
+  right: -37px;
+  transform: rotate(90deg);
+  transition: visibility 0s, opacity 0.3s;
+  /* Students should be well familiar with `transition` by now */
+  padding: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.popup__close:hover {
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 568px) {
+  .popup__close {
+    right: 7px;
+    top: -42px;
+    width: 20px;
+    height: 20px;
+  }
+}

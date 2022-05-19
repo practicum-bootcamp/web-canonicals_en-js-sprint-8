@@ -1,0 +1,36 @@
+.profile__title {
+  font-size: 42px;
+  line-height: 48px;
+  /* Measured with PixelPerfect, else it's 56px */
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  grid-area: title;
+  margin: 0;
+}
+
+@media screen and (max-width: 740px) {
+  .profile__title {
+    font-size: 32px;
+    line-height: 38px;
+  }
+}
+
+@media screen and (max-width: 568px) {
+  .profile__title {
+    font-size: 27px;
+    line-height: 33px;
+    /* It's 56px according to the design. Don't be too strict with students here. */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .profile__title {
+    font-size: 22px;
+    min-width: 201px;
+    /*
+      According to the design. Actually, I think there should be a spacing between the title and the icon, but the title frame is flawed. Don't be too strict with students here.
+    */
+  }
+}
